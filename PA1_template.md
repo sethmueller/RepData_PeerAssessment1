@@ -30,26 +30,6 @@ head(df)
 ```r
 # load any libraries needed
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-```
-
-```
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-```
-
-```
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 library(ggplot2)
 # create a separate df with all missing values removed
 ccDF <- df[complete.cases(df),]
@@ -77,7 +57,7 @@ hist(bydayDF$TotalSteps, col="red", xlab = "Number of Steps", ylab = "Number of 
      main = "Histogram of Total Number of Steps Taken Each Day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
 
 ### 2.  Calculate and report the mean and median total number of steps taken per day:
 
@@ -111,7 +91,7 @@ plot(byintervalDF$interval, byintervalDF$AverageSteps, type = "l", xlab = "Inter
      main = "Average Number of Steps Taken per Interval")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
 
 ### 2.  Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -200,7 +180,7 @@ hist(bydayDF$TotalSteps, col="red",  xlab = "Number of Steps", ylab = "Number of
      main = "Histogram of Total Number of Steps Taken Each Day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png)
 
 ```r
 print("Mean and Median with Imputed Values for NA")
@@ -268,4 +248,4 @@ g <- ggplot(data = byweekdayDF, aes(x=interval, y=AverageSteps), facets = weekda
 g
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
